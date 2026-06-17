@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#f5f0e6" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>کافه نقطه — منو</title>
+  <style>
+    @font-face {
+      font-family: "Parastoo";
+      src: url("/fonts/Parastoo.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Parastoo";
+      src: url("/fonts/Parastoo-Bold.woff2") format("woff2");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Vazirmatn";
+      src: url("/fonts/Vazirmatn-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "EB Garamond";
+      src: url("/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "EB Garamond";
+      src: url("/fonts/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: 400 800;
+      font-style: italic;
+      font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+    body {
+      --paper: #f7f2e8;
+      --paper-strong: #fdfaf2;
+      --line: rgba(17, 17, 17, 0.12);
+      --line-strong: rgba(17, 17, 17, 0.2);
+      --muted: #7a7367;
+      --shadow: 0 20px 55px rgba(17, 17, 17, 0.08);
+      font-family: "Parastoo", "Vazirmatn", "Tahoma", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(247, 242, 232, 0.92) 24%, rgba(247, 242, 232, 1) 60%),
+        #f5f0e6;
+      color: #111111;
+      min-height: 100vh;
+      line-height: 1.6;
+      margin: 0;
+      padding: 18px 14px 28px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .menu-shell {
+      width: min(100%, 510px);
+      margin: 0 auto;
+    }
+    .menu-panel {
+      background: linear-gradient(180deg, rgba(255, 251, 243, 0.96), rgba(249, 244, 234, 0.98));
+      border: 1.4px solid rgba(17, 17, 17, 0.72);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+    .menu-frame {
+      border: 1px solid rgba(17, 17, 17, 0.72);
+      border-radius: 28px;
+      padding: 18px 18px 22px;
+    }
+    .hero {
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 10px;
+    }
+    .hero-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .hero-copy {
+      min-width: 0;
+      text-align: right;
+    }
+    .logo-mark {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      border: 1px solid rgba(17, 17, 17, 0.82);
+      object-fit: cover;
+      object-position: bottom right;
+      flex-shrink: 0;
+    }
+    .qr-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      border: 1px solid rgba(17, 17, 17, 0.82);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.42);
+    }
+    .brand {
+      font-family: "EB Garamond", "Georgia", serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .venue-name {
+      font-family: "Parastoo", "Vazirmatn", "Tahoma", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+    .welcome {
+      font-size: 14px;
+      color: #5d584f;
+      line-height: 1.9;
+      max-width: 28rem;
+    }
+    .category-nav {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 14px 0 10px;
+      margin-bottom: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(253, 250, 242, 0.95);
+    }
+    .category-nav::-webkit-scrollbar {
+      display: none;
+    }
+    .category-pill {
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 14px;
+      color: #6e685d;
+      background: rgba(255, 255, 255, 0.5);
+      transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+    .category-pill.active,
+    .category-pill[aria-current="true"] {
+      background: #111111;
+      border-color: #111111;
+      color: #faf6ef;
+    }
+    .category {
+      margin-bottom: 14px;
+      scroll-margin-top: 70px;
+    }
+    .category:last-of-type {
+      margin-bottom: 0;
+    }
+    .category-head {
+      margin-bottom: 6px;
+    }
+    .cat-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #8a8275;
+    }
+    .item-card {
+      background: var(--paper-strong);
+      border: 1px solid rgba(17, 17, 17, 0.08);
+      border-radius: 18px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    }
+    .item-card.sold-out {
+      opacity: 0.72;
+    }
+    .item-header {
+      direction: ltr;
+      display: grid;
+      grid-template-columns: minmax(80px, 96px) minmax(0, 1fr);
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .item-price-wrap,
+    .item-info {
+      direction: rtl;
+    }
+    .item-info {
+      min-width: 0;
+    }
+    .item-name {
+      font-family: "Parastoo", "Vazirmatn", "Tahoma", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.3;
+    }
+    .item-name-en {
+      font-family: "EB Garamond", "Georgia", serif;
+      font-size: 15px;
+      color: #6f685c;
+      margin-top: 1px;
+    }
+    .item-desc {
+      font-size: 13px;
+      color: #59544b;
+      margin-top: 6px;
+      line-height: 1.7;
+    }
+    .item-meta {
+      margin-top: 8px;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      direction: ltr;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 1px 8px;
+      font-size: 11px;
+      color: #82796d;
+      background: rgba(255, 255, 255, 0.5);
+      line-height: 1;
+    }
+    .badge-emphasis {
+      border-color: rgba(17, 17, 17, 0.52);
+      color: #111111;
+      background: transparent;
+    }
+    .badge-status {
+      border-color: rgba(17, 17, 17, 0.52);
+      color: #111111;
+    }
+    .item-price-wrap {
+      text-align: left;
+      padding-top: 2px;
+    }
+    .item-price {
+      font-family: "EB Garamond", "Georgia", serif;
+      font-size: 23px;
+      font-weight: 500;
+      color: #111111;
+      line-height: 1;
+    }
+    .item-price-unit {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #7a7367;
+    }
+    .empty-state {
+      padding: 28px 16px 12px;
+      text-align: center;
+      color: #7a7367;
+    }
+    .footer {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-family: "EB Garamond", "Georgia", serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #8a8275;
+    }
+    @media (max-width: 380px) {
+      .menu-panel {
+        padding: 10px;
+      }
+      .menu-frame {
+        padding: 14px 12px 18px;
+      }
+      .item-header {
+        grid-template-columns: 72px minmax(0, 1fr);
+        gap: 12px;
+      }
+      .item-price {
+        font-size: 20px;
+      }
+      .item-name {
+        font-size: 16px;
+      }
+    }
+    @media (min-width: 481px) {
+      body {
+        padding: 28px 18px 40px;
+      }
+      .menu-panel {
+        padding: 16px;
+      }
+      .menu-frame {
+        padding: 16px 16px 20px;
+      }
+    }
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .menu-shell {
+        width: 100%;
+      }
+      .menu-panel,
+      .menu-frame {
+        border: 0;
+        box-shadow: none;
+      }
+      .item-card {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="menu-shell">
+    <section class="menu-panel">
+      <div class="menu-frame">
+        <header class="hero" id="top">
+          <div class="hero-row">
+            <div class="hero-copy">
+              <div class="brand">mofé</div>
+              <h1 class="venue-name">کافه نقطه</h1>
+            </div>
+            
+            <img class="logo-mark" src="data:image/webp;base64,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" alt="" aria-hidden="true" />
+          </div>
+          <p class="welcome">به منوی ما خوش آمدید. سفارش فقط حضوری.</p>
+        </header>
+
+        
+      <nav class="category-nav" aria-label="دسته‌بندی‌ها">
+        
+          <a
+            class="category-pill active"
+            href="#cat-5f241720-195d-4967-9400-337955212f66"
+            data-category-pill
+            aria-current="true"
+          >صبحانه</a>
+
+          <a
+            class="category-pill"
+            href="#cat-e634367b-6998-4468-804b-468d8287eb93"
+            data-category-pill
+            
+          >میان وعده</a>
+
+          <a
+            class="category-pill"
+            href="#cat-29338988-5677-435b-aa6e-c2bca03a1436"
+            data-category-pill
+            
+          >غذا</a>
+
+          <a
+            class="category-pill"
+            href="#cat-22808e8c-87d9-493a-bf58-d2e78738abb8"
+            data-category-pill
+            
+          >دسر</a>
+
+          <a
+            class="category-pill"
+            href="#cat-01bf3b4f-2094-4052-8b7f-0609872ded58"
+            data-category-pill
+            
+          >اسپرسو</a>
+
+          <a
+            class="category-pill"
+            href="#cat-a7e52fa9-18cf-435e-bdfc-d02c7f2ddad8"
+            data-category-pill
+            
+          >اسپرسو بار سرد</a>
+
+          <a
+            class="category-pill"
+            href="#cat-52a73db2-c8f0-414f-bcb1-3af343cf0e7f"
+            data-category-pill
+            
+          >چای و دمنوش</a>
+
+          <a
+            class="category-pill"
+            href="#cat-87353661-3703-49a3-9a79-2f1f67ba4cf7"
+            data-category-pill
+            
+          >نوشیدنی گرم</a>
+
+          <a
+            class="category-pill"
+            href="#cat-3a7425ca-fb11-4d3d-a8a2-665887155938"
+            data-category-pill
+            
+          >ماچا بار</a>
+
+          <a
+            class="category-pill"
+            href="#cat-6e296b73-5dc2-44dc-b871-4a35a8232479"
+            data-category-pill
+            
+          >قهوه دمی</a>
+
+          <a
+            class="category-pill"
+            href="#cat-f25283dd-d1c6-4b93-8178-48055d24eb4d"
+            data-category-pill
+            
+          >شیک</a>
+
+          <a
+            class="category-pill"
+            href="#cat-429065b5-9a48-47ff-89dd-404eb7223a89"
+            data-category-pill
+            
+          >ماکتل و اسموتی</a>
+      </nav>
+
+        
+      <section class="category" id="cat-5f241720-195d-4967-9400-337955212f66">
+        <div class="category-head">
+          <h2 class="cat-title">صبحانه</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان میوه‌ای</h3>
+                <p class="item-name-en">Fruit Croissant</p>
+                <p class="item-desc">کروسان تازه و کره‌ای به همراه تکه‌های میوه فصلی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">350 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">تست پنیر و گردو</h3>
+                <p class="item-name-en">Cheese &amp; Walnut Toast</p>
+                <p class="item-desc">نان تست برشته با پنیر خامه‌ای و مغز گردو</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">300 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">تست مربا و کره</h3>
+                <p class="item-name-en">Butter &amp; Jam Toast</p>
+                <p class="item-desc">نان تست گرم به همراه کره حیوانی و مربای دلخواه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">280 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">تست کره بادام زمینی و موز/توت‌فرنگی</h3>
+                <p class="item-name-en">Peanut Butter Toast with Banana/Strawberry</p>
+                <p class="item-desc">تست مقوی با کره بادام زمینی و اسلایس‌های موز یا توت‌فرنگی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">400 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">تست نوتلا و موز/توت‌فرنگی</h3>
+                <p class="item-name-en">Nutella Toast with Banana/Strawberry</p>
+                <p class="item-desc">نان تست برشته با روکش نوتلا و میوه تازه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">450 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-e634367b-6998-4468-804b-468d8287eb93">
+        <div class="category-head">
+          <h2 class="cat-title">میان وعده</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">سیب زمینی سرخ کرده</h3>
+                <p class="item-name-en">French Fries</p>
+                <p class="item-desc">سیب زمینی خلال شده و سرخ شده ترد</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">365 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">سیب زمینی و دیپ چدار</h3>
+                <p class="item-name-en">Fries with Cheddar Dip</p>
+                <p class="item-desc">سیب زمینی سرخ کرده به همراه سس چدار گرم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">550 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">سیب زمینی و بیکن</h3>
+                <p class="item-name-en">Fries with Bacon</p>
+                <p class="item-desc">سیب زمینی سرخ کرده با تکه‌های بیکن برشته و سس مخصوص</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">650 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-29338988-5677-435b-aa6e-c2bca03a1436">
+        <div class="category-head">
+          <h2 class="cat-title">غذا</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">پنینی بیکن</h3>
+                <p class="item-name-en">Bacon Panini</p>
+                <p class="item-desc">ساندویچ پنینی گریل شده با بیکن و پنیر ذوب شده</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">600 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-22808e8c-87d9-493a-bf58-d2e78738abb8">
+        <div class="category-head">
+          <h2 class="cat-title">دسر</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان (ساده)</h3>
+                <p class="item-name-en">Croissant</p>
+                <p class="item-desc">کروسان کره‌ای کلاسیک و تازه پخت</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">250 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">سن سباستین</h3>
+                <p class="item-name-en">San Sebastian Cheesecake</p>
+                <p class="item-desc">چیزکیک سن سباستین با رویه برشته و بافت خامه‌ای</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">450 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">وافل شکلات و میوه</h3>
+                <p class="item-name-en">Chocolate &amp; Fruit Waffle</p>
+                <p class="item-desc">وافل گرم با روکش شکلات و تکه‌های میوه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">500 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">وافل بستنی و عسل</h3>
+                <p class="item-name-en">Ice Cream &amp; Honey Waffle</p>
+                <p class="item-desc">وافل تازه به همراه اسکوپ بستنی و شهد عسل</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">550 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان موز شکلات</h3>
+                <p class="item-name-en">Chocolate Banana Croissant</p>
+                <p class="item-desc">کروسان پر شده با شکلات و موز</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">420 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان توت فرنگی شکلات</h3>
+                <p class="item-name-en">Chocolate Strawberry Croissant</p>
+                <p class="item-desc">کروسان تازه با ترکیب جذاب شکلات و توت فرنگی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">400 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-01bf3b4f-2094-4052-8b7f-0609872ded58">
+        <div class="category-head">
+          <h2 class="cat-title">اسپرسو</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">اسپرسو سینگل/دبل</h3>
+                <p class="item-name-en">Espresso Single/Double</p>
+                <p class="item-desc">عصاره‌گیری استاندارد از قهوه تازه برشته شده</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آمریکانو</h3>
+                <p class="item-name-en">Americano</p>
+                <p class="item-desc">ترکیب اسپرسو دبل و آب جوش</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">10 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">ماکیاتو</h3>
+                <p class="item-name-en">Macchiato</p>
+                <p class="item-desc">اسپرسو با لکه فوم شیر</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">15 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کورتادو</h3>
+                <p class="item-name-en">Cortado</p>
+                <p class="item-desc">ترکیب مساوی اسپرسو و شیر گرم با فوم کم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">60 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کاپوچینو</h3>
+                <p class="item-name-en">Cappuccino</p>
+                <p class="item-desc">اسپرسو با شیر بخار داده شده و فوم ضخیم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">120 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">لاته</h3>
+                <p class="item-name-en">Latte</p>
+                <p class="item-desc">ترکیب اسپرسو با حجم زیاد شیر گرم و فوم ملایم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">150 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کارامل ماکیاتو</h3>
+                <p class="item-name-en">Caramel Macchiato</p>
+                <p class="item-desc">لاته با سس کارامل و وانیل</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">200 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">موکاچینو</h3>
+                <p class="item-name-en">Mochaccino</p>
+                <p class="item-desc">ترکیب اسپرسو، شیر گرم و شکلات</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">250 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آفوگاتو</h3>
+                <p class="item-name-en">Affogato</p>
+                <p class="item-desc">یک اسکوپ بستنی وانیلی غرق در شات اسپرسو گرم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">180 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-a7e52fa9-18cf-435e-bdfc-d02c7f2ddad8">
+        <div class="category-head">
+          <h2 class="cat-title">اسپرسو بار سرد</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کافه شاکراتو</h3>
+                <p class="item-name-en">Caffè Shakerato</p>
+                <p class="item-desc">اسپرسو شیک شده با یخ و کمی سیروپ</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">20 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس آمریکانو</h3>
+                <p class="item-name-en">Iced Americano</p>
+                <p class="item-desc">اسپرسو دبل روی یخ و آب سرد</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">10 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس لاته</h3>
+                <p class="item-name-en">Iced Latte</p>
+                <p class="item-desc">اسپرسو و شیر سرد روی یخ</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">120 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس کارامل ماکیاتو</h3>
+                <p class="item-name-en">Iced Caramel Macchiato</p>
+                <p class="item-desc">شیر سرد، یخ، اسپرسو و سس کارامل</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">200 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">فراپاچینو</h3>
+                <p class="item-name-en">Frappuccino</p>
+                <p class="item-desc">نوشیدنی یخی و ترکیبی بر پایه قهوه و شیر</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">300 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">تونیک اسپرسو</h3>
+                <p class="item-name-en">Espresso Tonic</p>
+                <p class="item-desc">شات اسپرسو روی آب تونیک یخی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">80 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-52a73db2-c8f0-414f-bcb1-3af343cf0e7f">
+        <div class="category-head">
+          <h2 class="cat-title">چای و دمنوش</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چای ارل گری</h3>
+                <p class="item-name-en">Earl Grey Tea</p>
+                <p class="item-desc">چای سیاه دم کرده با عطر برگاموت</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">2 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">دمنوش سلامت</h3>
+                <p class="item-name-en">Health Herbal Tea</p>
+                <p class="item-desc">ترکیب گیاهان دارویی مفید برای تقویت سیستم ایمنی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چای ترش و به‌لیمو</h3>
+                <p class="item-name-en">Hibiscus &amp; Lemon Verbena Tea</p>
+                <p class="item-desc">دمنوش ترش و معطر با خواص آرام‌بخش</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">دمنوش آرامش</h3>
+                <p class="item-name-en">Relaxing Herbal Tea</p>
+                <p class="item-desc">ترکیبی از گیاهان آرام‌بخش مانند گل گاوزبان یا بابونه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-87353661-3703-49a3-9a79-2f1f67ba4cf7">
+        <div class="category-head">
+          <h2 class="cat-title">نوشیدنی گرم</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">هات چاکلت</h3>
+                <p class="item-name-en">Hot Chocolate</p>
+                <p class="item-desc">نوشیدنی غلیظ و گرم بر پایه پودر کاکائو و شکلات</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">350 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">ماسالا</h3>
+                <p class="item-name-en">Masala Chai</p>
+                <p class="item-desc">چای سیاه دم شده با شیر و ادویه‌های معطر هندی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">180 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چای کرک</h3>
+                <p class="item-name-en">Karak Tea</p>
+                <p class="item-desc">چای سنتی عربی غلیظ با شیر و هل</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">160 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چای انگلیس</h3>
+                <p class="item-name-en">English Tea</p>
+                <p class="item-desc">چای سیاه کلاسیک به سبک انگلیسی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">20 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">وایت چاکلت</h3>
+                <p class="item-name-en">White Hot Chocolate</p>
+                <p class="item-desc">نوشیدنی گرم و شیرین بر پایه شکلات سفید و شیر</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">380 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">لاته بیسکویتی</h3>
+                <p class="item-name-en">Biscuit Latte</p>
+                <p class="item-desc">قهوه لاته با طعم و تکه‌های بیسکویت</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">300 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیر نسکافه</h3>
+                <p class="item-name-en">Milk Nescafe</p>
+                <p class="item-desc">ترکیب کلاسیک قهوه فوری و شیر گرم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">150 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-3a7425ca-fb11-4d3d-a8a2-665887155938">
+        <div class="category-head">
+          <h2 class="cat-title">ماچا بار</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">ماچا لاته</h3>
+                <p class="item-name-en">Matcha Latte</p>
+                <p class="item-desc">پودر چای سبز ماچا با شیر بخار داده شده</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">120 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس ماچا لاته</h3>
+                <p class="item-name-en">Iced Matcha Latte</p>
+                <p class="item-desc">ماچای سرد ترکیب شده با شیر و یخ</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">120 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس ماچا توت‌فرنگی</h3>
+                <p class="item-name-en">Iced Strawberry Matcha</p>
+                <p class="item-desc">نوشیدنی لایه‌ای ماچا، شیر سرد و پوره توت‌فرنگی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">160 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">ماچا انبه</h3>
+                <p class="item-name-en">Mango Matcha</p>
+                <p class="item-desc">ترکیب جذاب ماچا و پوره انبه شیرین</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">170 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">ماچا لیمو</h3>
+                <p class="item-name-en">Lemon Matcha</p>
+                <p class="item-desc">نوشیدنی خنک و تابستانی ماچا با طعم لیمو</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">80 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-6e296b73-5dc2-44dc-b871-4a35a8232479">
+        <div class="category-head">
+          <h2 class="cat-title">قهوه دمی</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">قهوه دمی V60</h3>
+                <p class="item-name-en">V60 Brewed Coffee</p>
+                <p class="item-desc">قهوه دمی چکه‌ای با شفافیت طعمی بالا</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">قهوه کمکس</h3>
+                <p class="item-name-en">Chemex</p>
+                <p class="item-desc">قهوه دمی با فیلتر ضخیم برای طعمی ملایم و خالص</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">قهوه ترک</h3>
+                <p class="item-name-en">Turkish Coffee</p>
+                <p class="item-desc">قهوه سنتی با بادی سنگین و فوم غلیظ</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">15 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">قهوه یونانی</h3>
+                <p class="item-name-en">Greek Coffee</p>
+                <p class="item-desc">قهوه دم شده مشابه ترک با رست ملایم‌تر</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">15 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-f25283dd-d1c6-4b93-8178-48055d24eb4d">
+        <div class="category-head">
+          <h2 class="cat-title">شیک</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک وانیل</h3>
+                <p class="item-name-en">Vanilla Shake</p>
+                <p class="item-desc">شیک کلاسیک با بستنی وانیلی خالص</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">450 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک شکلات</h3>
+                <p class="item-name-en">Chocolate Shake</p>
+                <p class="item-desc">شیک غلیظ با بستنی شکلاتی و سس کاکائو</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">500 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک لوتوس</h3>
+                <p class="item-name-en">Lotus Shake</p>
+                <p class="item-desc">شیک جذاب با طعم بیسکویت و کرم لوتوس</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">550 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک انبه</h3>
+                <p class="item-name-en">Mango Shake</p>
+                <p class="item-desc">شیک میوه‌ای با طعم استوایی انبه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">400 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک نسکافه/اسپرسو</h3>
+                <p class="item-name-en">Coffee Shake</p>
+                <p class="item-desc">شیک بر پایه بستنی با شات اسپرسو یا نسکافه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">450 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک توت‌فرنگی/شاتوت</h3>
+                <p class="item-name-en">Berry Shake</p>
+                <p class="item-desc">شیک خنک و میوه‌ای با طعم توت‌فرنگی یا شاتوت</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">420 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک کره بادام زمینی موز</h3>
+                <p class="item-name-en">Peanut Butter Banana Shake</p>
+                <p class="item-desc">شیک مقوی و پروتئینی با کره بادام زمینی و موز</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">600 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">شیک موز شکلات</h3>
+                <p class="item-name-en">Chocolate Banana Shake</p>
+                <p class="item-desc">ترکیب پرطرفدار بستنی شکلاتی و موز تازه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">520 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-429065b5-9a48-47ff-89dd-404eb7223a89">
+        <div class="category-head">
+          <h2 class="cat-title">ماکتل و اسموتی</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">لیموناد</h3>
+                <p class="item-name-en">Lemonade</p>
+                <p class="item-desc">نوشیدنی خنک کلاسیک با آب لیمو ترش تازه</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">120 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">موهیتو</h3>
+                <p class="item-name-en">Mojito</p>
+                <p class="item-desc">ترکیب طراوت‌بخش لیمو، نعناع تازه و سودا</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">130 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">رد موهیتو</h3>
+                <p class="item-name-en">Red Mojito</p>
+                <p class="item-desc">موهیتو با طعم میوه‌های قرمز مانند توت‌فرنگی یا انار</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">150 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">اورنج بری</h3>
+                <p class="item-name-en">Orange Berry</p>
+                <p class="item-desc">ترکیب آب پرتقال و سیروپ یا پوره میوه‌های جنگلی</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">140 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">روی راجرز</h3>
+                <p class="item-name-en">Roy Rogers</p>
+                <p class="item-desc">نوشیدنی کلاسیک شیرین بر پایه کولا و سیروپ انار</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">150 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس تی</h3>
+                <p class="item-name-en">Iced Tea</p>
+                <p class="item-desc">چای سرد دم شده با طعم لیمو یا هلو</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">90 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">رد کوکتل</h3>
+                <p class="item-name-en">Red Cocktail</p>
+                <p class="item-desc">کوکتل سرد و شیرین با ترکیبات میوه‌های قرمز</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">160 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">اسموتی شاین</h3>
+                <p class="item-name-en">Shine Smoothie</p>
+                <p class="item-desc">اسموتی میوه‌ای تازه و انرژی‌بخش</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">200 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">آیس پانچ</h3>
+                <p class="item-name-en">Iced Punch</p>
+                <p class="item-desc">پانچ میوه‌ای خنک مناسب روزهای گرم</p>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">180 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+        <div class="footer">Powered by mofé</div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const pills = Array.from(document.querySelectorAll("[data-category-pill]"));
+      const sections = pills
+        .map((pill) => {
+          const href = pill.getAttribute("href");
+          return href ? document.querySelector(href) : null;
+        })
+        .filter(Boolean);
+      const activate = (targetId) => {
+        pills.forEach((pill) => {
+          const active = pill.getAttribute("href") === "#" + targetId;
+          pill.classList.toggle("active", active);
+          if (active) pill.setAttribute("aria-current", "true");
+          else pill.removeAttribute("aria-current");
+        });
+      };
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          const href = pill.getAttribute("href");
+          if (href) activate(href.slice(1));
+        });
+      });
+      if ("IntersectionObserver" in window && sections.length) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (visible?.target?.id) activate(visible.target.id);
+          },
+          { rootMargin: "-20% 0px -60% 0px", threshold: [0.25, 0.55, 0.8] }
+        );
+        sections.forEach((section) => observer.observe(section));
+      }
+    })();
+  </script>
+</body>
+</html>
