@@ -358,6 +358,36 @@
         padding: 16px 16px 20px;
       }
     }
+    .item-photo-wrap {
+      margin: -12px -14px 10px;
+      border-radius: 18px 18px 0 0;
+      overflow: hidden;
+      max-height: 200px;
+      background: rgba(17, 17, 17, 0.04);
+    }
+    .item-photo {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .item-body {
+      direction: rtl;
+    }
+    .item-body .item-name {
+      margin-top: 6px;
+    }
+    .item-body .item-meta {
+      justify-content: flex-start;
+    }
+    .item-body .item-price-wrap {
+      text-align: right;
+    }
+    @media (min-width: 421px) {
+      .item-photo {
+        height: 240px;
+      }
+    }
     @media print {
       body {
         background: white;
@@ -388,7 +418,7 @@
               <h1 class="venue-name">کافه نقطه</h1>
             </div>
             
-            <img class="logo-mark" src="data:image/webp;base64,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" alt="" aria-hidden="true" />
+            <img class="logo-mark" src="data:image/webp;base64,UklGRj4wAABXRUJQVlA4IDIwAADwxgCdASr0AfQBPm02l0kkIqIhItP5UIANiWlu6B/JKeZwHqDnZOTn5n4kNdc4DbAeYDoZby9vNWQaeaf7N2n/3j+8/t1/evT/8c+b/u39o/w3+u/u/uK5d+wP/S9Df5J9wv0f92/d3/E/PH+L/339q8R/ix/afmt8AX45/Mv8r/cP28/ufyF/af7nteN2/zn/W9QX2w+q/6j+//u9/ovhm+X/53oX9l/+j7gP64/8X19/6vgmflf+z7AX9A/wH/Y/z/5nfTV/Sf+n/K/6393fa/+i/5H/yf5n4Cf5n/YP+b/hPyy+cj/8e4n9r//57q/7N//kWvJbNKCnoJbNKCnoJbNKCnoJbNKCnoJbNKCnoJbNKCnoJbNKCmzDG3G3wovkHgVF/jSp6CWrWVF2v+cLbvvk6f4KMFRdtAqI2qbXuOSWI2p+C8mh60Fwr/7KnoJbNKCnoJbK7/DqjDxvqtYE8OqZH/lcLo/NGHf/gGk18aKfx1lRreKLNe4+tyE76gA4f/sIsqZBnnabNKCnoJbNKCnjqtHqam7yG5O9nuLAIljTG/1L5UVbpSH080xJMB1FZjMTL2CLSU7sQw65sIyCoSb/JvYRPAlSJbuig2MoGuqIvkHgVF3uIsvLBqVC/JhMY3GKmX3X+VOvnZ/5SVyfME/Pg0vITOpqo+3coUL9XTdVEWHBTWOC1WaFoppeO1OqZMUhF8g8Cov8FBBJOcdKNc6lrQmDFxSyjzI3juO0JxKW9iE6ieAc58sk5+a1NjoE12EVIVxXVEXyDwKi8AJPCPZMC6yc8ECFlo2FMS5y9zMel7Odo+ZLLAQdziAa4jMaVPQS2aUEz5NvOv17SRcQpVngESRHXCnqKy4nLaT6POn/LupeYk4m01kTnxBrqiL5B4FLPYUwODlEZmAYZBdlFxXidn4iSKxPJpsoMqAGxwSEzGvD8mZxeZYi369/LLNKCnoJbNARFxhZowMsqST5aKnBEd1VUdnzp/arhqtE2pPL1PJCMLQmYOW9U9BLZpQU1T3UsWfcsOfw0r4qOF3KeBeKLC4hdR7h3LWhD0YpIDQFYzpyWtizhHONxpU9BLZpLAaT2H0TMlEV/moPgtqhb5wIGf/evdzYitgdonceX4t1ZVMhYZNJ3W9U48Cov8aVPHUqW5RbKgxXe/uAESEz+GKmdGkxp6LxFJYw70Y0VulcstF2evljSp6CWzSUCx5yXUi/HpEPi2hReg7H0B86CfMKClUJg771208NUwNYaxHWHcHE014TKYZQU9BLZpQU0y+GhWqMFCCSwttWwaKgFwMaxx/XTy589aICDXftBMcbZUpzTknzPTOYNCeBUX+NKnoJaui6pPzZq6Rw8mjjff9/mIwAhHJkQS8Q5psNplw53qY4/Z466l/G+l86XU77yOKZreIw4QP8YovDlNKXoubNZpQU9BLZpSBHZIsJCG/UlvDZ7kAHg4zl1JwbUNmn+V//+CDJ1cbkHG8aJft+3z6soi+QeBUX+NKnjuOiCbh1MU1onLr6+JZSh1l//Ite//hIQ3a/ujKqAiciNdURfIPAqL/GOQ+ZVgs1sONF8g8Cov8aVPQS1o6WIGBZApgyHZXw2AlUk3uLJHnXMuqIvkHgVF/jSp47ibO2A7BwwIcmmKS6ZiZkqtxvQ2ME0qMXU0b43DUuqIvkHgVF/jSlywBdA+L1uzc+dga+gc9ZEYhvp29bgb1Gt85/ni5y3C/uPtcWAaf7lwFPJbXiOt5GCWzSgp6CWzSgmjqN5/aWb+jEx6ubW1lj60FfEgTIvsOHt11tE17VO3drgV25V+AyfOLm5Laq6Z8uSMkSeThiBT0EtmlBT0Etmkrc2uvZqDsgP//7QPJ4wkXwGe2FjOlkxfMTaKi/xpU9BLZpQTKcOVsa8Bp6QC3vXV1Rb1TxXolXVGfZQG8HJBEmVdErzmZjUDb5VxQ4TbvjZZ+r+X6WztGuqIvkHgVF/jHfWvpWIiz6aunLnlQOW0TkkWWcVUb/1PWCXcKdKGV23nCZDHZ6UjCSRZQ1C8++uBeN8Wm+FF8g8Cov8aVPQS2bnYHAqL/GlT0EtmlBT0EtmlBT0EtmlBT0EtmlBT0EtmlBT0EtmlBT0EtmlBT0EtmlBT0EtmfAAP7/uHAAAM/7/rgYKf0zrxBwVoYDukJbreBuHiC6sYgTOP9HkNa1tZ7bOMHeSMoBojmQugwQigNQ86rQdqxY1sQoR8GVlLlczjdyOkZSPzRCThQazc3Jak5iv+fxbr5w3eAUMlX8zbD3hXoBwZJQ29i9dCFmFv7jAUenwW96HQCSF2FVIBrGOikjh92eEpzqcHGvZiC2JavjdWS1B/wdVPsupkKnRAZMNjphH+PsL3hp3FxTxMWj5FSAiWSVAPn3OcKOb2pkEmgSS//b0loHJpf/XlAxK20FXeTBkugVlRLzWlsdjWZjLGhTCBLbrNOkN1/DabOtRt7FHrpY2QY4PCSAx8S/rBQB2MyzHT8/WckKDs8+sYviVnju4wmWnR7BtLsG7CDavMqsFtxT0qf8nUlvOkJdNFXqgsStocMvuR2eh6YfPH87U85+8F72Hz6PzZGP6Lu6gtJMABldrZ90872mc413K6bpgbXF2f2CZuTYDuYXtVnrD4nvs3E131x6+vmmpuYss/bdiKVYd/RiZwp3p+1bZOGa5lcwRyJAlC2wtjg3fyaq7ewwUNcC3hupvt4mnqnOOLCdb5e0LfgfbgkXQ3Rqd7OAz4lipnASYH6GosUsj85wpNP/Uar/2FuPaqVnzZ+aLeayd/THfrLNF7ea0+MY5VQIKA4I83LGQp7oBuJfZlOUMiHJpWiOTmzU0I+ruTCO9UwJQPCUlUOjV1RR1eTIWDKFbzoSRUhOvlTkB3R5LJYWHHAp2q8IqTl/pn4IILtfQ5lEM5ypl9n7SJkv1++/KpoJXWxvW4z4R/1zL9Efw6RTJQZHNoucIvTkdpfwHQiiMVbZaCErKO27y9jol2fE7y9JDRgA5yhhNnw0Bdfs3Jmmui5PNfO3mizrY6CVlDUfNzD1lRL5kq+XqSUUWfE86ZxpytK6fPZnAQR3nrbmJA6J8TrfHtqATs/VL+wtiQ1C0KLAoqgFh5ssgkK26DRyrufg83xaIg5hljJ80/l+4XA2wPjIitjZlj0pzuTWXYhJ03FsrVP4/lg7DREfStMmesWSW6DM6KfgG/9maFelftEi/YH/XTCw8cGYULizperQa8Btas//kQm+34W+Zju6sJGdXM7CDN9BLGjmBlK60PgmsEZ5dQDpMRhHpUucF6MS2SH4JA6xzP1ThbHZs/h2YTXduNAlk6YrO4yB552WJ3/fXZhktY4ZBAyMSQiJSY997bSQLopT6BNNoZuUXT6hdAixZ8Y5YbFTAIPHqqUZ+rVhs/Yhja344LJVTMVTRxEKPQejdb3pTFwO50ofFCc61KKTW0YnwRY8L9lSRfCBzPUOSkCr8HZxEAuxgYILahdTHJfGR59at7cJDPEPt92tnSsxtJyVA9Mt2hF/0NddRo89IPtvYjT4VTIQzYbtB1DAuqsDmYVMCsKfYufsC4lJgqn5SHzO1e3RDbulh1qBDh2b/jFpCRslZm3TuSRqL4rqkrU+NIkQqqz8/cxZn5qMcAnpciTk3Kw+J9pFUcZwGziBm44IriLVlZndWrqCYJIFPqe6jU1qnzEB/A13Fzu8uvr75ZB3SaXWKV3BrBqDYprF3X5GGMQHxQgZQkx7rgR69t7CXSiJbO/lUiZL1VxzEFODLFRPPkD4cDMgGv0kX3g1Wr2xKHInbFjP29ttwT+zlLjPzk5PrRcGJ7vKSDW+3S1sm33N6LfZtmkLpmKdJWNRdp/fepdExaTR6IkPQWAN+LZd6trQ7EdE90T3ZvnxKtJD3LY9CkKEPrtmDWCuTUGZUznVQX5WRLbAYFrseGX6ey+Z60gIzIT1oo/N+efHDipEBBp6PaE8vA1nyMoJMiDn57vdphfYXgeKkOhZdWgd+bcLVFBKiSiN0EWKnDoO5endgiMJRpzvc/VXY0Cmy/LJSepOs+LXS5yoJb8HqI9fRP7Lii+hd5d9Nnn7pXJ8gqES9qRjV15OGa4GRF9UhyBBmQdrqBAxy1X5PkWpu1CMPfGXY9fqgiIIGpy2ljd3jj+KaTdyrx408utzP32xssw2dhHs8YXxUjYUKDUiCQ3NV3A94Rp55QbjSC7B3ZutZR8+OOzbnfi+6Lxe/b9TmAJpXCkOkUjqAccfkcYCd6KZGj5u5XafyYgxIP2282Ofit7FRmVc0oT3KVklWAUEp+pPr39KhO4ZqaAPXDise+mCgwHK26bb6jdhKby7uyOAmK1j3XPWNs7HC2abNVCqn+fyYoqPyH5UDMTa32mFe+Ieep6SjiMHgKzJDu4AXBX+vyXjECAWg+tpsBea9OjWcxKqnl0fJ6uHn03Ha22otT468bbQ2DKJPizBRJyDek8ZArACWh/UV50UrHstrZ63t4bGK2k7TaGcqjE5K28DyLk+TqIV7BptnjgktOThNxyvbQXHXGsz1tTxTthXl2v9q84yk9Wvm+q46rAi5aMIfgKQInGQn8dmP8Y5+Xydv5KFJhH1MfSAiH06sxr+zcMFAhghbRkfjtA4jJbPPXMQwPq4o8MyHjNhw30w9iYj0+lwhzOGUkZPjDlYV4sD1suVDL/js/C0/Et34gmzFzuFwqwcvusdYrnZqCCBjsKCtNaWQfRXy5+vI+2jHP5PWbXMmCZOVY97cLQ+TQpFOYfWFS1iKF4QJp+qSalD7D7k292uxSzWgzW/GRCJr9Qn6JzZcLcFm59pMuXMsfBO/vhDL0B2eEfBF4LGBInpf1uV3k2mAVeGtQiJ+P75k/Scxo7zChILiw0UZfjFjyK17LGhy/8sUrRhQE3dBDKthDZxf9QNbQRqq0qz7SsGEYzt44zPbCChqXcSSnKz7jLlJ4Xum+3nokSCpY+OaUfmKcNI7lAqZkChvCmYQNnR4sPTGLLcSmEYOFPLdz9G5mys2kVoI96gOuEMAQLOTABi9qZNLIbwvuFl1nIrCSXk4JHbvIkLttArAmKVZHhnUi1M54WI18XWywdy/MJlWCyT1QtU6UP10o/KXXuRJfUTEBIG5+uwUaU8ncR01oHTcpVdRTJPJ8eLON+UgHQV4gHG02JgyL15iL3Q5stFhTTTAUpsc3mIl88oOP7c+PtjlflvOILulJ/pUBdfAtLxkREFC9Vip3zc/Yj/ARTURfu9fZIG3eX2YhBlVILqNp1uB3Konfcbeq+t0qTrMBROR2LUEeb3DxwalwPYXlevJYYfUhyvNp+7jjUJKC3tOFQIi0sBFzyeu2L8Gjd8Tes7KDhqFGPPMi+DQPSnDaA38r//Rp9U9LCROTr7n8mQSxx3V9nPvneRPDstnGG4DZcMM8JywLa7Ln+llaCWjR+DQqUD1GiP8l8AOE6XMfYCRCAIOAo8XSVoijtEqJdAwb0tJ2thW5A3WYM+NoSAzaHAUW/Mj4onEDe9wr+OE5eKvZHnnB8R/dVS3UMRFAF0g6gmnm8nut1bR+aTVEAnZ5H3EQAiNeXk3V9vf+sDW0A8bspGlWb1naiyt43kN1wCCUx0zf5uP4mdRtCf4cnKLR3ZHf3nvC2bdyN1qilnmyMVy37WlGWmr/5M8iPGic8N8kH8is753ciEnNnDwqIqH+TtCxlEt118d+R8+9Q5sV8a+FNKU2cylt4z+BA1WfhK5z9VXQ8UZle9FT22IADgka/LjKsFuQY2CU6wXPsexj8kWWfKujUebFZlhv5R55Y/2ZYGfrhkd2mxwQKVpWTgfVR32tyzBxyynxymswFHc+7mqV4KZMJjEIzgLPflduXfp1IO/+aoB61lopmQ/15m2wBPh1l9RI9eJGz+ryuGCzg0Lfw/YnT48cy7JOEqN0QAINLd8+LTWusAZzbvupTmNHaRdn9PkQg8QSGxuAw0viQ48Hp55ZDcBnt4BpPCDXemhPlz49ml3cM0KyTccUwqoU7AVJ9wt1IQzgj44rox0CaXLBlMdUS1ar8K/N7blpxu8BWVwN4/CkRQXob6PlV1bkfThkALcjsyS9PkJrd1ikALVNDlB6lTfRKCUEWw6Uu9/dJOvc3hLzmPg/9j1HiZfEBQ8FBvYbF0zwLDMR2APw506/VlDTjuW1dJTuoJgx1jaDiZ2abwN6qWzytzGWUBdyTujhQMiwRJbqpm3rWtcUGpqdTOEUJe3IKojlH62WzXyIQ7WZEC0sfMTew83EjxlxHmcf6EWVBdNQ8f6RywOTyOatx1ZKxdxgBTc9dJiu+pw/9LBwDep6CIX90u5b1ZqBD9jUEZ+TC85KX109xFGAMMNxqb8/Z23fI8VZ2z+B8uEn6oQbGbyfjOkEHQ2t/Zwh3qrNLKDOKFu6ujF/1igFSjzGEZ5iTabFklPJfIveg393o+5uVMYlCIJxQjDvrApMuH3mCmmgJEQMBp+celRprzGfEA+RCgBJwFE2UjkhvzWQtg7caciLwMgZ7N3VrC8zHDJf3ZTAWuGpC6pT8yIzkgHsr7lK994rW0GDb7ivI4JwVkwDWOcaM7zEMk+WS1RnH8OxQMg0Zw3jSapR4KLFeS3zyx8euZBT1I08Kqf04bF2AGiJX/Wbyntt2gigfT3Cb8dEY/Eah+y74+JVtx2JC5Z8OEsTp0lFSZzb71Xs0PGwy4FO9v464+pawnLAX8EFvt7ZUVNi3hQJHa4CcloEOAxc+ecdD64oxpV/VtuC9coPLpKo2vgwvBfjYmYci9HLlSqPPiZBpKe7WocPo5BriKLQygsry1GwRIKnj1aEPDyMB/sKPkakktK0tCsp+7saGxLZOeor/V3t8YOeEpfKwStti0v++x9e1f/5hcL1glo0+VHdu3+3sW3MDA3Th+IDvcM6ghDSryqgVGJ3/DpAfRrdMwNpgda3RWuZpjP2rjtTbzC9kGluA7vexZNMHtbCQMigeM4oKyz0uVRtMDciI2OauBIYEzxZtyv5mqdnt0cP2a7fpW57JV4Bwlt8F8qpZj3MhsiDJQD4CWx9s0SGMZIAutuo5j7TDI+IYpkrBVQQNluGC1Xtxmec9lX4D80NK2fcvPM8okXzsqtGQEG2Fg7QiTlJwv7uEGlwqCfrsQjcPgri1lYI4URgIO9iZlMLuldjw/gTlR8qw+dT6nTB8uePGxTAsrnYD0xO3Vm7FTRrwpZc0AqtH55UZkcq/yO4jzv5mOV9ZyhlMwTVGiHYTlLdHc+F6fgJcsUjZwq6YAl8+PvPoLdkTb8R8KmEOtJKbQBi4AflgFGDnV2OACVhXAE6elD4gCfNCL/EH0JqN1X3pnlQBKesnLzweDYAAYT+8ruQqOJ6XTn3vdySG9eILEcke3bsskUwOLQXisKVmtSF5To+aGU524JwpiWkNdya2WREL5iGIBh4VoRFqJm7FTOK4ke+Z8b/gl0JkkzADbLgDXf0Sv7TeFDM+3KC8eVeB3Enf4VeUrgGDU+FATX94x9/jP/0LV4XgXrQettRP2z4imLJJ9dv9M2D1hUuzYfalLeGNBMkm4dbAF9vVis38cyC1dJV9SRvgzmNoqXSQhAlIRilNnwRzczynAbm0X0L1pkmgJKDLh5qnQ3lF027hSKg2rC9LEs57IrhSoQow7HA9BWcf6zY2Evs8UkRV2FNCSdTcKke8VqFGhl00LV7AL9Arxq25//2HSo4Im1YdYfWso5XBNVjNS8TifqRW4/vVfLxWB4BoBn/WsUoQACT10XEz9qauAXsSisIQYStq9nzKjPm4EqloKjQhEF17gy4ln2/C0pr3waN6i43eISg6BCqJ81szV0ckSNAVgJHVR8beUN16VRVBBqLYX5h5KTsJjwJjE4jPGY9MwKP/Ewhi1AnwxSwOttPgYIP4CeICSbMPOCTQ1P/teI2usL/5Eldk1fgmw2x4H7cKz87Noyflr+9XSsGuk9jZIMGNAcx93pFfJs9Izjys8U/eT2jyP1mv7acdvMib90thMSJlN38Tws55SnNfXpYdhu3ouqoLHT65A13nDibMXtGCTcHgPdrNs3yNkWr7t/OLimcoZnvBGJ7yf1NE5ONf2/E/bSz3IGQvlfoLTmSXxQfolilHyS1OhlO4PS5kZhCztwGLdF17EYBWn3lyFyMOPxWLbpmZBCahH8MORmSq0+oDdjLUsFA/wj0/aG0Oh1BZnE+L7HedmOMQSWmxmBACEATgRWGPUE+VddWamqPo1oCdsaV+50KZABJtpb/rPhIDgjHI+KOuo9e63cNW9PsyxGqKcht9etWNGtRuEABefbb6C5Mph3egzy/mZyrD4zpwqIpCtv2wmTIaTw7hA0cNVOZyQ0mjNZ5nQtRIC4kneww+gZNHqBIA7AVDSWM8fDYVDLF6HKljUk40unfHSNU+1BeA2GYf5ssfbiBjVR9YYbLLLZyar0BOA6SYz7ixXoqIrvvgKamNYYZaTSzpwdJlZJuOAkjDf98E6UVgHu+IHzLRtnkNRu+UYAl1AoCKsm/xIyZhKld0Q4oBdQPZ8bQbilUos+ujbrvwrBphptXHvYAJRjlZv/G6QeqPMULw0I3przhmv8tV0zNpbpEhoJGBtXmAcJ8JZHAyJsHP2JtOG7lX4CTXbqBBiEyWfW6rTVAgTA3ZV0NJ5XCa1J9tb5j/cR1e5thAED5gYYC6BEHrO9+2Lza5FGMWqWY8+jbVYhBS0C1KztZlqQqvuSPqV5A5HlOtS2Usfnnn1yr37T05BFElKzLB2evft9sGOHLmC7OAKmnoszyV5lpeujXqQNsefeI1dP5vBKtL0yxUCfRqQ9zFSVN2yDbdCQOXTVHP68yP6XwurXD4sDIAAKmiWYC3xddajUWdU079UQ8vRxTOGLSQFG4EfMaVR+Da80/I0/AFknGgsrRIvtdxXGRT/i33ZP1829uwtYrRzxlP95Xo/9S9a8jNHGNnNRIttsWFjmueGArBCXqQCjAbSa6Aky5N1E9bPc1tKRui6qHhChwua8YsXNdgEidfJTfC2NZ93WIHNJYXW4+tIU+kae9LE5DFkF7wNY0mOdOOJo94SLbyQMIWXnDcCKnBIUHI0CuV2X72gzXQ5smLLDS4Nnyd9SFm+0O/X8udcjUvMv3hPDRo5aZrmoBk/6Jw+QsSYdy5j3JYHnPjH0wJAjsGGe+y1kZY2Zw0iFZibwuA9PawBSEtC4fXEj6gsr40FCJa5Nsp0j6C14mIZBx6GUQAvsWLoS0blHW2J7uMumVb5jE5KgRyDhLQDfAqHNLY8AxGS04YD1mxTIkieMwTszp04WLL1jwndFFiGjXz577RDf5ac6BTgv5I1Lvb4iO54XS7qA9ZbDJmBbQBArUySWEsjfe3/2Wqp/eoCq2WoP2X2g5Irulzq1wPHMzg+nyqKSdv50bOpDhiDG0gKBA+FnKx+LXxi8TcgQyyeUpmGlaF82l7tQPJt51jo6h1nIspgnhfb/wYFpyfv91C+532+CVIlLPrQiKnUTyLJf3eXKkRA0DmqBY0yAERtrkGzsfNILRY5ZTlqfqBgjH4iECzWGZtFu0/KI7knIymv1mob0+kGmLygb9UppOV4WHwaL7vhSPfH6h+lydM3dDNBPRXjDicly43R4nRSyMXu8H548gD/itCIvc33fUCjt03FdY8Vi6+Tjfr+2MeEbEXWt7g1NwQPJoPRsWXK4tVnQ0CExtUcdRGMgqIHEeGf3fG7j3Ko77yKLiF3u6459TuCvk6Gee7UyAuSN25mYokFa7gCPwKYDqMDZKLDwUqdiTVXeeX9i9Dd2xBJxFzzSmke5a3XpBHVxAWoLq0pm0Zj+oz3kmjwRq9Sjixh/3ObCH7GIe5oleg8GfCk1TUbXF1v7JFb2GmyvFy3uON8KRSOgrGwH653F40L/V1jEjCASj2EaY/UBAzTUjFxLLrp5YgmBUH0+7cfKfRqZN6yRtX2oUQbkZlJui+G72GwdoJ2SCM7jf5HMCRXAOjKA4Rb5/4Xs/GMZVclb6UMDhVm2wSpEO2msuYoTzSGY2Plwpsfz1amKTdO0MDzvch/Qcw+RssUFJnftMqp08fhwaj/gpzk8Z3XahZTzVh4qnj0Qkd675ME1NFTyd88ZHzApRHzNSous77E1mf9g94Y2Q3Yzs4wmsh6GWK6kEq6J+dX+ECn9SZJNFTSL8ucCgzpyt9I/o4QeEGeUBpjYwZ6dsWppkrgxgK7c7aFy2mQrjm8NBVpZlE8ydXEWsFK4N/LsFtR4V/tMnLMQPsh8QxSP67tkrqF8rMGghhnAdnmCeVtGOI8fKxKtT1F2QAF8bhmN/s5viDeaPyJxYMuK3pbWAMr968FVt1PDfydvv3NkhuWcoxx4AlpkLJRk50X65Btm8rmrgLFUKwVEnoGnlFuRs/opgGsEuaRsATaPjBjwP6lyKg7rE4Jp5s9JI6Ii+vHaM+UW9VltsQO2gqq/actj2gRj5ELstUBQsQwFx7AhiKjBhur1XWxD4l/OfbbyvcpLo799euTbJjjCceEychWfzZpIjEX4NCWNoNZ9zki8F5v2NemChYnhI96pOZEM6ACX+usBSzvQppNZ5DxUSPZ1+jQyKgLW2eqneNBAqvHHQkFYDBbyvdjcnHznyv6Hi/dmf/dgYCrxb30tXmqusLUad7fr/i0/58qi+Ircuys8Wd5RAVLzvGn8N7tuizhxgBneWVZD7aPaG2xfw1IPC2e0vyCoKZFCHUBY4QOrqwEuqni4zBxBTyT94qI0nYbN/oqc3ZLIx75O77P8GB2cYFvKL3J/sdFccv/lchtEmnx884FRmd91NVdHIpRGzy3iQ0a0hLbvsCA+ueSHRNiuHKo1xQzSNVVrYdjcDO976t7TUMxvxSWBJ1criLlKB6sgNjfSmcLrQ2Q0tWmOGQI04lsXgwoTTfxZZymHcMAYsBl7xYAMTTwYZCrly4ws8lEVGDYRvu4Vd3xuE9nePkbweABlqGsYmWZsDSlGL04HmB3uRJDTeOd3BbhBKjLNd0tMXSCvy4gT8THFUDqonuL+ubs1QWrdjCSj7FHIJIqGbHH3XJr2qFPXzDc+ojglJglIUbB8R/ky1osreAYgTmcKeaQ87nAAM6pgXaAXViNqeWnbXyoN7fIqop6gvW7kLga+0dCf799STpDqGx+NxkCvLbmQTUpIO+g/9neHR4QXNDxcAv964gIH1FO0Z8W8GP++u8YtsdWHHbNkK/VtDINqEZp4qUDCrhdTpJmYCBtyTla+ZAGWVu/y4diS8UGPBXC3JvFZ0/cK9GWiN2pq8fCxjAXNKZAznSCwqJqNlPttyrs24sk0pVaD1mi4Jggr4ubZNo93pvgp3Yw6Tkj3w6Kzw09IUPLBWdn81tKYTZX17lZpvcxIJazyQOOthR/3/cMazQoBm6tnCNA27nBjv31IIptx/E0CLjkWL+SHa8tMgLh7sebM0QZL6Hv1XaIs/nToEUmzIwabCgWoXFY75/flQIxZn0uBr3ykJBDIrGEU/5PWXiVW2olIpPMhdFaVqXigpjcvpoEELHhwMG7e4UO11LnpEeckJl2zICacQECQ4D7qxP/FBhN+yXV7zRcMxtRnAv/HCsE2U4iogJRQak7kfdXskv6a5jpVGWu+vh8y5b/KIYK3BOQFoTr4gh+EMs+HxVlQmIFy5+WtDWSxTMoM+p5kexfIISPfWUu/NsfH6EbbltFx3x0M3KidzfoOpAbnWM94FTxrJI2s0nP6jA+VPURmVpZPbFMiSH8eT/5OlpF+NSTXFY/KCmfA7tEYgk2hYckVh1Fa1XUc0AnwA7lNMUwANjglvb2BkO6waI/XOAtyek7PvZP006Sf8PRBzfgEdvLITAsuxYSXdEDfFgdaYKlBQDPr3xjvtARwfJoLGhcJ+IG0rgzb8oqWHjIK2MPJXlbW43VAQAahi+UZxRAl8u9cCgdQlFdXwE/KzJfZ85Ynq2Px82war5sCycYq9z4CyaIcKvZaxxYisu5FEc/nD6WoX9RKMB4AHS+3VaehGz/728JMoMYmioXOytm6z/m2OQzjXlqLu+D2Jz8r3uVfCz80oWFLqrgYTnPM1FPW6hgA8Cd+0X6GLk4LbqCcbU/DMKtzdppAYgUFhQG2Kv6cxA1VJ0JgbaGZn9RiLQ41e+5RteN7B+c8cVRK6ls93j7RIcletThL6hr2We6lQ7wR12oDriIKN94TJVQYVCPVqhWDzuFz6PtF660yAXg/vPxB4xRILL+4/Q8+NT8/swn/79Q/lGfp2GCFV151wvlrRbfNq0aQ4abuuqmCLexhNBBy3mplCOPawW9yeyzL2M8VzH5mdE+fq6MKnTyKUbI8v0DRQID/qrFxTG0c+HnR+/FFaxLo5qfRo0q9J4wvvh+od1djVFPsNrgW87rFKm/y69GCqgE0MfkRqG+5p8zkLSGL78zVfdeW2u6OGpQW1kW+AFMuuAKw3aj/oyx1heZtsG1T9NRej7R5uHcJG9PmaGUDcBOWmdfAGAUEqtmF1xvgHvMLgWPAPY4AMWJilIWGpjcMLzrAX93h83yCrksiWrmTAIV8o2GxYohNWUEuS8OQvwugsd5Ly33VNUA8rkMCG1mNqLlOoG57k+zovLe4Ie/tsPIyCmFojVSFxom7yY+5h43TCKngPIbN9nwIwsfDZIKgj5l8vbffwuEMnrKDCs60DUR90BIZvoZwmAYTAMfgBdfuygTluEJcsYi5a73lRdjUwN+qMW4eOQ5oRq5VD/5ikkVRYJqhCt861igdNnb8IgMaqOz5VM/YpS5lFloNwCj+R8Lg8M8MtcptugTHTpKjMADbUnelqoQeutI16rmBedviH8P3fkW3vud78nnR+w0oPjLiNHd4mk45vPp1odNykHOmH1LfXBnGTj8ryNUipITKvFn/7aZpJ9PGfScigrBEYzNNtylxFIoaTXKoPILLLr7LgXkbCwrbrvSLxll4MMnY90m16TjBDK/ejB5FAkNOJEEggOF7xKzI268Glbrim4rSExwQwDFuXtYGn0bgpPz7vTlkqTvJ07nyYt6Ohop3JldNDSAo5jNnFJLTDNqGQuC0vh1klYq86enzL9PWc2kaF84LW+j12x6plWaEiVmK3AH0KTIJ1SucSH1LGJIO631gH5457ch9hAcUCfLPllqDUOmJ8moThmh7+TlL9ch4TIPZdJrH+IPIt+UMAfNRkftii+2xOVBTqKwYguDDG32trGpnrxEWzaD63Lslqlod5RqcRu4eN/ti+75AMO8G+glLvx8vTd7eRJZSgFE7CYjNvFHXTjMGsQRastxPnZfoZ35PLzkzQ6gyIKROSRIFzIQy3cn5xXUllfFAvSGKYNuGGDk9O2yCijCHcpVJLM3ZSPwxKU2jwba/zz5pTu6BRNJd28u9qGHfPAr2hPlD24BypiKh29hTxklG+TaAwTef3UmjI482Om2sfO1yyGkaKPPZnpLqD93FSw63SZnGZ/N6th1QTP/Fu5RBm9Xatbwk0mm1niPKDwRz5g0qO5KZLqc1bngKXJHs7IYFCE0JXGo8nsLjWbw/TR1biiq/kxSoUZNRW2NyWXd6r1t+buxLiBfX7qoDuHCkyCkW+20/8i/xOeizj04ESZje4R5Vj85hmRu+tYNSkgacsmyLbWr37aq7++i31OGcfoWA7uTP6cdHcC5bzw4QmJP8Zcbk9KmWRNcyqb88Lc/SiDoxpp9+SjTsgC1VwqXqLAvWpbffxWNriOM1dZCziXaOLPt19QusM2wMcu71xzaw7RwSYcoYq6YmNXS5cpn2yZsUfqrp3nX9APQzPZIPcHub4MQLSOynMlvqxaKgBNbQc6KsGySnMZFc1SoRa34eIBXoDLUQXwdgA/8VLWMfoONce/+UqOo7GcTQ+IYGamixd5+o3K/9vcDS1c6KIO7nHn9szA4ShR1iy43c96Gj1p4Bi2g2S+VW6Jt+Mfdg2re7J0a/p4fCjA8/uPnnxBYT2HzVG27aEiJpc2YO8twBt3EoBVEgROOoYpU4YPCBnQ61QolhcRvESp+dx/aB/DUE7cC0S5ySKqJevaIVB9fBVGKL4Tq2EeNZgp/6a8B/9Vc0IvKqqWTJu/mdESecQgSu2Llfdr1UcGdsWF2bkQPXPzGA4iEmGptKmAA0cJ62YVICb5rghaAmTpod/ywaR02ufXPIYDAQdXqQ0GF/aDJ5g2cjHe1A/6hRgkY5hqNtSkGagVxim9Mnj3hGV0b42fDN2cwGfN1dmmViALNq5G8UUc4ILcR5kQOZw1cZ09B/0kzJwY+QEG3ShU8SKKD3618Am2NnZv9nft7aDzZ/kFGHY7cIfgWhlLtH+hudd8hncsA2OB30b5FRS9X7LQ/o35oRag3FdYZbWa5ktVh5orkMpvu6c+mhuR0aoQbDBlsEWnkxOq92C6AresWlF4F6vtfEvB+ARJ4ItEmT3N/oN6471B3Dgt2whRa2CMQgF0P5kKOoTdm1hTEa3ztYlQR2grVQDG2+YUg1yyHvRKQk9qPXcqV1pWF8z9dGFTHBg/X89otbVexcEvGK1yav54MVo+TqC6HjuWAgHQBmcC6b1tWi3KunjTBXJAWtEEC3KEtPavBtVC2wYicWQN6z5vkCniNTc5xaTYbNI2rKAJxWzciKL7RNA0dB/V598AeR6Xnt717bpwg0AAAnktREFn/HcXOhfgBzYXSefI1Vs2D6GUN5Iqi5dcdY+bK6yQsS2GiD1MjxRrzRM+gq6YBJRxPVLqw78IWOOGmqfV9Qm24Pwni6GAMG2aKkGVcD91/cUm8Wk59etD1A7rAPr24Udhz+pBwme0l+Uc9pLfIh3aqPWOnV9Xcf2okmg1SMbaH3npyRChcZGWq9D0+8CURPbUAgCZYX0zE6GnwmFf66RJdC9NgMgxsce6c6c02SWptUlNPoVnm5vJFhDnMP7SD/8eOqznW7Ya3isEpP3hTft1iM3osh6vDkf9PaP9O6/YkgLjh6UXTbhR1+eUt+bbJHySYUwpstlRZNX+wufNF5w5xi+VgiWMz0SaJH/1l+IpIO0nKKU+BPfh0ccgiqJkbRxPLto/VFpnf3jxXnlBGhwleUE48KLosfkm/5ree2mkVVLotZd8o+HSQF+G9p6lQaqIyRGRJ8tyhh1LDDF65pSYIHz1rmOWs11kLotmccEecmsatYKfaf98Ih/jFTmz/XDBT3vykA45e8MvTGhfEKHpkuwh1k+5q7/Z3yKUB38ictkRh8gsbxjRgypp83x4QlSRiCFLeCyl9k//sCGxxm6Q3V+uuIXSR0O3h9PEXjAVkxUGZeOT026fxn4Sj00EoHULJ/km9Sf+TxNLdValEh8MUS57UO9/JbKH5NU/bLGp3iE2FAq1tamwFxAAXpawqfD6OeKJqJ2NSQV05SuT1RlDUmlSfq4cCE34lP2DNW4y13KDDxAD8HgqryUqC9OWEBpEAr8fWmRpehSUjzjgAVQSzrK/q77ouSm7JqrmNOy7vHy5UbKx507yU3tVmX5jU4YHdnIHyofO6efgnLNOGzLKOX1B5LZPHAPb335gitrp4fCnf6t2Osd9ER7MAY7NTIQVqIFVuyfzvkNoZB1P2wwRtjBGMzaEN2NX9/OeVpF21M/+Z6kdPluyEETF5wFh76ED8l327Pv3aI9hn1Ba/eDrvxlPNXaS3JDLZjR81mCFWnJwBV3bkYwCWt+5lS6JCtkCCkUsz3WUUoBazrCQrI/R7xTUgx2XkQVlbbFBykR8BNVucbEmTgVpaUVO6fVGHEOZu+Ppu757aUglF1wAGKzekaxl8EfOzNfdDqQp8VU8XR0PP/HBsToLIyQ777Nn2KmRTnrXsWYkjDsTF1nhJgUsSWaCkJugUduAEXaxp1ZOvGhRXq2MU12L3vioPZQ6Te3AXsYIqv8le8oHTn9jLsT7GvHkCKHRt8c0U+unw8hbfxyzR6JuFLu1OHI4SexHa6bReKgmjvoPduLEUlNXDqPfGHffst2PotegoX/Nhb693561f5VD53uHIXFXCE9B7Wj1MvAvGT1fV2cD/3flszr1+///xwo6aj/65RQrgCc2hKJgjixokdwRjdl9GkgB97XgpAFiaJ0ZwgD6fBwqBxZEunc6dA6LCmOvw6vvSC2jLKcNzsuS4RswxJSLJFtXNxoMcPIGTq6dIyj4wN9Bqyg8yBFC68zXnmZNiRbmsJlUz3hOihdlbU7MdmCKTQq72QPBY1/0RtJlf5zNzaV92mUyeOnKTp3J+mFCEE+6RZQN45P5lKiDfv1MsDeaI9SeMZ06flm6bvr/8o5nhEcgC6kwVIQt3P9A38GKlkzAGKAjLqCaSpk6Zp/bP7Br6lDOlifU6pEQA2bsdhZhwJDhH2nz2EvldD5Mb9+QHSaXEWj24gyw0ZFEppyCa0+Q+FqfVd1f6VQU8jQjC5+MBsrVKzXASY5Mrmo+ThvnFAPsAFNWAbC8zxQLfIvhakAAAAAAAAA==" alt="" aria-hidden="true" />
           </div>
           <p class="welcome">به منوی ما خوش آمدید. سفارش فقط حضوری.</p>
         </header>
@@ -412,10 +442,31 @@
 
           <a
             class="category-pill"
+            href="#cat-a31b4634-985a-41ed-a6e3-fbca6299faf1"
+            data-category-pill
+            
+          >نوشیدنی‌های گرم</a>
+
+          <a
+            class="category-pill"
             href="#cat-34873f63-6585-43a8-9b58-e33850f94a71"
             data-category-pill
             
           >اسپرسو بار سرد</a>
+
+          <a
+            class="category-pill"
+            href="#cat-38956aaf-ef64-4e42-8e30-1f072f809747"
+            data-category-pill
+            
+          >قهوه</a>
+
+          <a
+            class="category-pill"
+            href="#cat-22808e8c-87d9-493a-bf58-d2e78738abb8"
+            data-category-pill
+            
+          >دسر</a>
 
           <a
             class="category-pill"
@@ -465,20 +516,6 @@
             data-category-pill
             
           >میان وعده</a>
-
-          <a
-            class="category-pill"
-            href="#cat-29338988-5677-435b-aa6e-c2bca03a1436"
-            data-category-pill
-            
-          >غذا</a>
-
-          <a
-            class="category-pill"
-            href="#cat-22808e8c-87d9-493a-bf58-d2e78738abb8"
-            data-category-pill
-            
-          >دسر</a>
       </nav>
 
         
@@ -824,6 +861,72 @@
           </article>
       </section>
 
+      <section class="category" id="cat-a31b4634-985a-41ed-a6e3-fbca6299faf1">
+        <div class="category-head">
+          <h2 class="cat-title">نوشیدنی‌های گرم</h2>
+        </div>
+        
+          <article class="item-card sold-out">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۸۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چای دارچین</h3>
+                <p class="item-name-en">Cinnamon Tea</p>
+                <p class="item-desc">چای سیاه با دارچین و عطر آرام.</p>
+                
+                
+                <div class="item-meta">
+                  <span class="badge badge-status">ناموجود</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۷۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چای نعناع</h3>
+                <p class="item-name-en">Mint Tea</p>
+                <p class="item-desc">چای سبز با برگ نعناع تازه.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۸۰٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">دمنوش بابونه</h3>
+                <p class="item-name-en">Chamomile Tea</p>
+                <p class="item-desc">دمنوش آرامش‌بخش بابونه با عسل.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
       <section class="category" id="cat-34873f63-6585-43a8-9b58-e33850f94a71">
         <div class="category-head">
           <h2 class="cat-title">اسپرسو بار سرد</h2>
@@ -944,6 +1047,249 @@
                 <div class="item-meta">
                   
                   <span class="badge badge-emphasis">80 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-38956aaf-ef64-4e42-8e30-1f072f809747">
+        <div class="category-head">
+          <h2 class="cat-title">قهوه</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۱۴۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">لاته</h3>
+                <p class="item-name-en">Latte</p>
+                <p class="item-desc">اسپرسو با شیر بخار داده شده و کف لطیف.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">140 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۹۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">اسپرسو</h3>
+                <p class="item-name-en">Espresso</p>
+                <p class="item-desc">قهوه غلیظ و خالص با طعمی قوی.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">5 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۱۳۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کاپوچینو</h3>
+                <p class="item-name-en">Cappuccino</p>
+                <p class="item-desc">اسپرسو با شیر بخار داده شده و فوم غلیظ.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">120 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </section>
+
+      <section class="category" id="cat-22808e8c-87d9-493a-bf58-d2e78738abb8">
+        <div class="category-head">
+          <h2 class="cat-title">دسر</h2>
+        </div>
+        
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۲۲۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان</h3>
+                <p class="item-name-en">Croissant</p>
+                <p class="item-desc">کروسان کره‌ای کلاسیک و تازه پخت</p>
+                
+                
+                <div class="item-variants">
+                  
+                    <span class="variant-pill">
+                      ساده
+                      <span class="variant-price">+۶۰٬۰۰۰</span>
+                    </span>
+                    <span class="variant-pill">
+                      شکلاتی
+                      
+                    </span>
+                </div>
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">250 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۲۹۰٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چیز کیک سن سباستین</h3>
+                <p class="item-name-en">San Sebastian Cheesecake</p>
+                <p class="item-desc">چیزکیک سن سباستین با رویه برشته و بافت خامه‌ای</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">450 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۱۶۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">تیرامیسو</h3>
+                <p class="item-name-en">Tiramisu</p>
+                <p class="item-desc">دسر لایه‌ای ایتالیایی با قهوه و ماسکارپونه.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">280 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۳۸۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">وافل شکلات و میوه</h3>
+                <p class="item-name-en">Chocolate &amp; Fruit Waffle</p>
+                <p class="item-desc">وافل گرم با روکش شکلات و تکه‌های میوه</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">500 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۱۸۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">چیزکیک</h3>
+                <p class="item-name-en">Cheesecake</p>
+                <p class="item-desc">چیزکیک خامه‌ای با سس توت فرنگی.</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">350 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۳٬۴۵۰٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">وافل بستنی و عسل</h3>
+                <p class="item-name-en">Ice Cream &amp; Honey Waffle</p>
+                <p class="item-desc">وافل تازه به همراه اسکوپ بستنی و شهد عسل</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">550 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۳۸۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان موز شکلات</h3>
+                <p class="item-name-en">Chocolate Banana Croissant</p>
+                <p class="item-desc">کروسان پر شده با شکلات و موز</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">420 kcal</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="item-header">
+              <div class="item-price-wrap">
+                <div class="item-price">۳۸۵٬۰۰۰</div>
+                <div class="item-price-unit">تومان</div>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">کروسان توت فرنگی شکلات</h3>
+                <p class="item-name-en">Chocolate Strawberry Croissant</p>
+                <p class="item-desc">کروسان تازه با ترکیب جذاب شکلات و توت فرنگی</p>
+                
+                
+                <div class="item-meta">
+                  
+                  <span class="badge badge-emphasis">400 kcal</span>
                 </div>
               </div>
             </div>
@@ -1746,169 +2092,6 @@
                 <div class="item-meta">
                   
                   <span class="badge badge-emphasis">650 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-      </section>
-
-      <section class="category" id="cat-29338988-5677-435b-aa6e-c2bca03a1436">
-        <div class="category-head">
-          <h2 class="cat-title">غذا</h2>
-        </div>
-        
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۵۸۵٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">پنینی بیکن</h3>
-                <p class="item-name-en">Bacon Panini</p>
-                <p class="item-desc">ساندویچ پنینی گریل شده با بیکن و پنیر ذوب شده</p>
-                
-                
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">600 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-      </section>
-
-      <section class="category" id="cat-22808e8c-87d9-493a-bf58-d2e78738abb8">
-        <div class="category-head">
-          <h2 class="cat-title">دسر</h2>
-        </div>
-        
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۲۲۵٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">کروسان</h3>
-                <p class="item-name-en">Croissant</p>
-                <p class="item-desc">کروسان کره‌ای کلاسیک و تازه پخت</p>
-                
-                
-                <div class="item-variants">
-                  
-                    <span class="variant-pill">
-                      ساده
-                      <span class="variant-price">+۶۰٬۰۰۰</span>
-                    </span>
-                    <span class="variant-pill">
-                      شکلاتی
-                      
-                    </span>
-                </div>
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">250 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۲۹۰٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">چیز کیک سن سباستین</h3>
-                <p class="item-name-en">San Sebastian Cheesecake</p>
-                <p class="item-desc">چیزکیک سن سباستین با رویه برشته و بافت خامه‌ای</p>
-                
-                
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">450 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۳۸۵٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">وافل شکلات و میوه</h3>
-                <p class="item-name-en">Chocolate &amp; Fruit Waffle</p>
-                <p class="item-desc">وافل گرم با روکش شکلات و تکه‌های میوه</p>
-                
-                
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">500 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۳٬۴۵۰٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">وافل بستنی و عسل</h3>
-                <p class="item-name-en">Ice Cream &amp; Honey Waffle</p>
-                <p class="item-desc">وافل تازه به همراه اسکوپ بستنی و شهد عسل</p>
-                
-                
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">550 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۳۸۵٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">کروسان موز شکلات</h3>
-                <p class="item-name-en">Chocolate Banana Croissant</p>
-                <p class="item-desc">کروسان پر شده با شکلات و موز</p>
-                
-                
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">420 kcal</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="item-card">
-            <div class="item-header">
-              <div class="item-price-wrap">
-                <div class="item-price">۳۸۵٬۰۰۰</div>
-                <div class="item-price-unit">تومان</div>
-              </div>
-              <div class="item-info">
-                <h3 class="item-name">کروسان توت فرنگی شکلات</h3>
-                <p class="item-name-en">Chocolate Strawberry Croissant</p>
-                <p class="item-desc">کروسان تازه با ترکیب جذاب شکلات و توت فرنگی</p>
-                
-                
-                <div class="item-meta">
-                  
-                  <span class="badge badge-emphasis">400 kcal</span>
                 </div>
               </div>
             </div>
